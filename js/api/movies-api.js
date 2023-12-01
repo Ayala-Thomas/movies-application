@@ -7,7 +7,7 @@ export const grabMovies = async () => {
         },
     }
     const response =  await fetch(url, options)
-    const data = response.json()
+    const data =  await response.json()
     return data
 }
 export const grabMovie = async (id) => {
