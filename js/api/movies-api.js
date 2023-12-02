@@ -1,5 +1,5 @@
  export const keys = {
-    movieKey: "e4542b90"
+    movieKey: "3766a3326b6bf94cf2944786431d0e25"
 }
 
 export const grabMovies = async () => {
@@ -70,11 +70,12 @@ export const patchMovie = async (movie) => {
     return data
 }
  export const getApiMovies = async () => {
-     const url = `https://api.themoviedb.org/3/movie/550?api_key=3766a3326b6bf94cf2944786431d0e25`
+     const url = `https://api.themoviedb.org/3/search/movie?query=marvel&api_key=3766a3326b6bf94cf2944786431d0e25`
      const options = {
          method: "GET",
          headers: {
-             'Content-Type': 'application/json'
+             'Content-Type': 'application/json',
+
          }
      }
 
