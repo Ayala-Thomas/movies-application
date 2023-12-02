@@ -70,14 +70,14 @@ export const patchMovie = async (movie) => {
     return data
 }
  export const getApiMovies = async () => {
-     const url = 'http://www.omdbapi.com/avengers'
+     const url = `https://api.themoviedb.org/3/movie/550?api_key=3766a3326b6bf94cf2944786431d0e25`
      const options = {
          method: "GET",
          headers: {
-             'Authorization': `Bearer ${keys.movieKey}`,
              'Content-Type': 'application/json'
          }
      }
+
      const response = await fetch(url, options)
      const data = await response.json()
      return data
