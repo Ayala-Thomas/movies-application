@@ -1,3 +1,7 @@
+ export const keys = {
+    movieKey: "e4542b90"
+}
+
 export const grabMovies = async () => {
     const url = ` http://localhost:3000/movies`;
     const options = {
@@ -65,4 +69,18 @@ export const patchMovie = async (movie) => {
     const data = await response.json()
     return data
 }
+ export const getApiMovies = async () => {
+     const url = 'http://www.omdbapi.com/avengers'
+     const options = {
+         method: "GET",
+         headers: {
+             'Authorization': `Bearer ${keys.movieKey}`,
+             'Content-Type': 'application/json'
+         }
+     }
+     const response = await fetch(url, options)
+     const data = await response.json()
+     return data
+ }
+
 
