@@ -8,6 +8,6 @@ import{keys} from "./keys.js"
     // const getMovie = await grabMovie(2)
     // console.log(getMovie)
     const getApiMovie = await getApiMovies()
-    console.log(getApiMovies)
+    console.log(getApiMovieg)
 
 })();
