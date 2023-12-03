@@ -54,16 +54,16 @@ max-width: 120px;
     color: #f90100;
     flex-grow: 2;
     font-size: 60px;
-    color: #f90100;
+    font-weight: 900;
     position: relative;
     top: -31px
 }
 .cinematicUniverseltag{
     text-align: center;
     color: white;
-    font-weight: 400;
+    font-weight: 900;
     font-size: 30px;
-    position: absolute;
+
     top: -48px;
 }
 .searchicon{

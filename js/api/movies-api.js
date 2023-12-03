@@ -94,7 +94,7 @@ export const patchMovie = async (movie) => {
      <div class="card">
      <div class="card-body">
        <h5 class="card-title">${movies.title}</h5>
-       <p class="card-text">${movies.overview}</p>
+       <p class="card-text">${movies.video}</p>
      </div>
      <ul class="list-group list-group-flush">
        <li class="list-group-item margin-bottom"></li>
