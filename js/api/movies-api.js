@@ -2,19 +2,21 @@
     movieKey: "3766a3326b6bf94cf2944786431d0e25"
 }
 
-export const grabMovies = async () => {
-    const url = ` http://localhost:3000/movies`;
-    const options = {
-        method: "GET",
-        headers: {
-            "Content-Type": `application/json`
-        },
-    }
-    const response =  await fetch(url, options)
-    const data =  await response.json()
-    return data
-}
-export const grabMovie = async (id) => {
+
+
+ export const grabMovies = async () => {
+     const url = ` http://localhost:3000/movies`;
+     const options = {
+         method: "GET",
+         headers: {
+             "Content-Type": `application/json`
+         },
+     }
+     const response =  await fetch(url, options)
+     const data =  await response.json()
+     return data
+ }
+ export const grabMovie = async (id) => {
     const url = `http://localhost:3000/movies/${id}`;
     const options = {
         method: "GET",
@@ -24,7 +26,7 @@ export const grabMovie = async (id) => {
     };
     const response = await fetch(url, options);
     const data = await response.json();
-    return data;
+    return data
 };
 export const deleteMovie = async (id) => {
     const url = `http://localhost:3000/movies/${id}`;
@@ -83,5 +85,28 @@ export const patchMovie = async (movie) => {
      const data = await response.json()
      return data
  }
+ export const createMovieElement = async (movie) => {
+     const movies = await movie
+     const movieElement = document.createElement('div');
+     movieElement.classList.add('col');
+     movieElement.classList.add('col-md-4');
+     movieElement.innerHTML = `
+     <div class="card">
+     <div class="card-body">
+       <h5 class="card-title">${movies.title}</h5>
+       <p class="card-text">${movies.overview}</p>
+     </div>
+     <ul class="list-group list-group-flush">
+       <li class="list-group-item margin-bottom"></li>
+     </ul>
+     </div>
+     `;
+     const movieContainer = document.querySelector("#marvel");
+        movieContainer.appendChild(movieElement);
+        return movieContainer
+ }
+
+
+
 
 

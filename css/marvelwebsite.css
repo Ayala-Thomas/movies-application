@@ -1,12 +1,4 @@
-.page-wrapper{
-    background-image: url("../img/surprise_marvel_releases_a_new_full_trailer_and_poster_for_avengers_endgame_social.0.jpg");
-    background-repeat: no-repeat;
-    background-size:  cover;
 
-
-
-    z-index: 2;
-}
 body {
     margin: 0;
     padding: 0;
@@ -46,6 +38,7 @@ max-width: 120px;
 }
 .movietag{
     color: white;
+    list-style: none;
     font-weight: 900;
     font-size: 30px;
 }
@@ -57,6 +50,8 @@ max-width: 120px;
     text-decoration-thickness: 10px;
 }
 .marveltag{
+    list-style: none;
+    color: #f90100;
     flex-grow: 2;
     font-size: 60px;
     color: #f90100;
@@ -68,7 +63,7 @@ max-width: 120px;
     color: white;
     font-weight: 400;
     font-size: 30px;
-    position: relative;
+    position: absolute;
     top: -48px;
 }
 .searchicon{
@@ -100,8 +95,8 @@ max-width: 120px;
     align-self: end;
 <<<<<<< HEAD
 }
-=======
-}
+
+
 @keyframes shake {
     0%, 100% {
         transform: translateX(0);
