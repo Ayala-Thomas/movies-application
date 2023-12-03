@@ -1,4 +1,4 @@
-import {grabMovies, grabMovie, deleteMovie, postMovie, patchMovie, getApiMovies} from "./api/movies-api.js";
+import {grabMovies, grabMovie, deleteMovie, postMovie, patchMovie, getAvengersMovies} from "./api/movies-api.js";
 import{keys} from "./keys.js"
 
 
@@ -7,7 +7,7 @@ import{keys} from "./keys.js"
     // console.log(getMovies)
     // const getMovie = await grabMovie(2)
     // console.log(getMovie)
-    const getApiMovie = await getApiMovies()
-    console.log(getApiMovie)
+    const getAvengerMovie = await getAvengersMovies()
+    console.log(getAvengerMovie)
 
 })();
