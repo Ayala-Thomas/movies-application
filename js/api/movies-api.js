@@ -69,8 +69,8 @@ export const patchMovie = async (movie) => {
     const data = await response.json()
     return data
 }
- export const getApiMovies = async () => {
-     const url = `https://api.themoviedb.org/3/search/movie?query=marvel&api_key=3766a3326b6bf94cf2944786431d0e25`
+ export const getAvengersMovies = async () => {
+     const url = `https://api.themoviedb.org/3/search/movie?query=avengers&api_key=3766a3326b6bf94cf2944786431d0e25`
      const options = {
          method: "GET",
          headers: {
