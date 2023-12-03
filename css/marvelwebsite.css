@@ -76,6 +76,31 @@ max-width: 120px;
 .searchicon #search{
     align-self: end;
 }
+/*.display{*/
+/*    display: none;*/
+/*}*/
+.dragglecontainer{
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: move;
+    max-height: 100px;
+}
+#draggleinput{
+    display: flex;
+    text-align: center;
+    background-color: black;
+    color: #f90100;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
 @keyframes shake {
     0%, 100% {
         transform: translateX(0);
@@ -128,9 +153,16 @@ video {
 }
 
 .thorshammer {
-    display: none;
+    /*display: none;*/
     width: 100px;
     height: 100px;
     margin: 50px;
     animation: spin 500ms linear infinite;
+}
+.drstrangeportal{
+    position: relative;
+    top: 40px;
+    left: 100px;
+    max-height: 40px;
+    max-width: 40px;
 }
