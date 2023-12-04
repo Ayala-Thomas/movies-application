@@ -23,6 +23,8 @@ document.addEventListener('mouseup', () => {
     isDragging = false;
 });
 
+
+
 (async ()=>{
 
     await updateMovies();
