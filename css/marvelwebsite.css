@@ -89,7 +89,7 @@ max-width: 120px;
     border-radius: 5px;
     padding: 10px;
     cursor: move;
-    max-height: 100px;
+    max-height: 120px;
 }
 #draggleinput{
     display: flex;
@@ -100,6 +100,14 @@ max-width: 120px;
     padding: 10px;
     border: none;
     outline: none;
+}
+.plussign{
+    height: 10px;
+    width: 10px;
+}
+.pluscontainer{
+    display: flex;
+    justify-content: end;
 }
 @keyframes shake {
     0%, 100% {

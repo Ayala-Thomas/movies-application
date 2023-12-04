@@ -27,6 +27,8 @@ document.addEventListener('mouseup', () => {
     isDragging = false;
 });
 
+
+
 (async ()=>{
     const getMovies = await grabMovies()
     console.log(getMovies)
