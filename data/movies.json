@@ -2,7 +2,7 @@
   "movies": [
     {
       "id": 1,
-      "img": "./img/",
+      "img": "./img/Captain-America-The-First-avenger.jpg",
       "original_language": "en",
       "overview": "Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a 'Super-Soldier serum.' But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.",
       "popularity": 41.735,
@@ -14,6 +14,7 @@
     },
     {
       "id": 2,
+      "img": "./img/Cap-Marvel.jpeg",
       "original_language": "en",
       "backdrop_path": "/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg",
       "overview": "Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.",
@@ -26,6 +27,7 @@
     },
     {
       "id": 3,
+      "img": "./img/Iron-Man.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=8ugaeA-nMTc",
       "backdrop_path":"/cyecB7godJ6kNHGONFjUyVN9OX5.jpg",
@@ -39,6 +41,7 @@
     },
     {
       "id": 4,
+      "img": "./img/Hulk.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=xbqNb2PFKKA",
       "backdrop_path":"/xfBnQ4mgf1jYZsscJGJjr6ce0Ar.jpg",
@@ -52,6 +55,7 @@
     },
     {
       "id": 5,
+      "img": "./img/Iron-Man-2.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=wKtcmiifycU",
       "backdrop_path":"/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
@@ -65,6 +69,7 @@
     },
     {
       "id": 6,
+      "img": "./img/Thor.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=JOddp-nlNvQ",
       "backdrop_path" : "/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg",
@@ -78,6 +83,7 @@
     },
     {
       "id": 7,
+      "img": "./img/Avengers.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
       "backdrop_path": "/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
@@ -91,6 +97,7 @@
     },
     {
       "id": 8,
+      "img": "./img/Iron-Man-3.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=YLorLVa95Xo",
       "backdrop_path" :"/aFTYFqrWp4RS46Twm87l5e0ItYb.jpg",
@@ -104,6 +111,7 @@
     },
     {
       "id": 9,
+      "img": "./img/Thor-Dark-World.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=npvJ9FTgZbM",
       "backdrop_path": "/4zTsF0RtO0av3YX1NaKDqGKPxYF.jpg",
@@ -117,6 +125,7 @@
     },
     {
       "id": 10,
+      "img": "./img/Winter-Solider.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=tbayiPxkUMM",
       "backdrop_path": "/1RWLMyC9KcFfcaoViMiJGSSZzzr.jpg",
@@ -130,6 +139,7 @@
     },
     {
       "id": 11,
+      "img": "./img/Guardians1.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=d96cjJhvlMA",
       "backdrop_path": "/uLtVbjvS1O7gXL8lUOwsFOH4man.jpg",
@@ -143,6 +153,7 @@
     },
     {
       "id": 12,
+      "img": "./img/Guardians2.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=dW1BIid8Osg",
       "backdrop_path": "/n3gb8oqP9BeRCUsCmZVaT5eltPH.jpg",
@@ -156,6 +167,7 @@
     },
     {
       "id": 13,
+      "img": "./img/Age-of-Ultron.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=tmeOjFno6Do",
       "backdrop_path": "/6YwkGolwdOMNpbTOmLjoehlVWs5.jpg",
@@ -169,6 +181,7 @@
     },
     {
       "id": 14,
+      "img": "./img/Ant-Man.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=pWdKf3MneyI",
       "backdrop_path": "/1K3JmSNUN8OpjYsCjc0Hy0SYxAb.jpg",
@@ -182,6 +195,7 @@
     },
     {
       "id": 15,
+      "img": "./img/Civil-War.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=dKrVegVI0Us",
       "backdrop_path": "/wdwcOBMkt3zmPQuEMxB3FUtMio2.jpg",
@@ -195,6 +209,7 @@
     },
     {
       "id": 16,
+      "img": "./img/Black-Widow.jpeg",
       "original_language": "en",
       "backdrop_path": "/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg",
       "overview": "Natasha Romanoff confronts her past and the dark conspiracy of the Red Room while on the run as a fugitive.",
@@ -207,6 +222,7 @@
     },
     {
       "id": 17,
+      "img": "./img/Spiderman1.jpeg",
       "original_language": "en",
       "backdrop_path": "/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg",
       "overview": "Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man.",
@@ -219,6 +235,7 @@
     },
     {
       "id": 18,
+      "img": "./img/Black-Panther.jpeg",
       "original_language": "en",
       "backdrop_path": "/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
       "overview": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
@@ -231,6 +248,7 @@
     },
     {
       "id": 19,
+      "img": "./img/Doc-Strange.jpeg",
       "original_language": "en",
       "backdrop_path": "/aL53oMdZKZRJRH8txH07DLuleF9.jpg",
       "overview": "Dr. Stephen Strange, a brilliant but arrogant surgeon, gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.",
@@ -243,6 +261,7 @@
     },
     {
       "id": 20,
+      "img": "./img/Ragnorok.jpeg",
       "original_language": "en",
       "backdrop_path": "/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg",
       "overview": "Imprisoned on the other side of the universe, the mighty Thor finds himself in a deadly gladiatorial contest that pits him against the Hulk, his former ally and fellow Avenger.",
@@ -255,6 +274,7 @@
     },
     {
       "id": 21,
+      "img": "./img/Ant-Man-Wasp.jpeg",
       "original_language": "en",
       "backdrop_path": "/iYdgEUE2W2aJkgqfSjf1x3gFfuV.jpg",
       "overview": "Scott Lang teams up with Hope van Dyne as the new Wasp to uncover secrets from their past.",
@@ -267,6 +287,7 @@
     },
     {
       "id": 22,
+      "img": "./img/Infinity-War.jpeg",
       "original_language": "en",
       "backdrop_path": "/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg",
       "overview": "As the Avengers face a new cosmic threat from Thanos, they must stop him from collecting all six Infinity Stones.",
@@ -280,6 +301,7 @@
     [
       {
         "id": 23,
+        "img": "./img/Endgame.jpeg",
         "original_language": "en",
         "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
         "overview": "The Avengers, along with allies, must assemble once more to undo Thanos' actions and restore order to the universe.",
@@ -292,6 +314,7 @@
       },
       {
         "id": 24,
+        "img": "./img/Far-From-Home.jpeg",
         "original_language": "en",
         "backdrop_path": "/ng6SSB3JhbcpKTwbPDsRwUYK8Cq.jpg",
         "overview": "Peter Parker faces new challenges as he teams up with Mysterio to stop the Elementals and uncover the truth about mysterious attacks.",
@@ -304,6 +327,7 @@
       },
       {
         "id": 25,
+        "img": "./img/Eternals.jpeg",
         "original_language": "en",
         "backdrop_path": "/c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg",
         "overview": "The Eternals, a race of immortal beings, reunite to protect Earth from their evil counterparts, the Deviants.",
@@ -316,6 +340,7 @@
       },
       {
         "id": 26,
+        "img": "./img/Shang-Chi.jpeg",
         "original_language": "en",
         "backdrop_path": "/cinER0ESG0eJ49kXlExM0MEWGxW.jpg",
         "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
@@ -328,6 +353,7 @@
       },
       {
         "id": 27,
+        "img": "./img/Madness.jpeg",
         "original_language": "en",
         "backdrop_path": "/51wwXoVKpS6oJMbz03qvN0Hxt99.jpg",
         "overview": "Doctor Strange has to unravel the multiverse's mysteries, unleashing powerful adversaries and threatening the fabric of reality.",
@@ -340,6 +366,7 @@
       },
       {
         "id": 28,
+        "img": "./img/Love-Thunder.jpeg",
         "original_language": "en",
         "backdrop_path": "/vvObT0eIWGlArLQx3K5wZ0uT812.jpg",
         "overview": "Thor must confront the consequences of his actions as a new threat emerges, endangering both Asgard and Earth.",
@@ -352,6 +379,7 @@
       },
       {
         "id": 29,
+        "img": "./img/Wakanda-Forever.jpeg",
         "original_language": "en",
         "backdrop_path": "/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg",
         "overview": "The sequel to Black Panther explores the world of Wakanda and its new protector.",
@@ -364,6 +392,7 @@
       },
       {
         "id": 30,
+        "img": "./img/Ant-Man-Quanta.jpeg",
         "original_language": "en",
         "backdrop_path": "/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg",
         "overview": "The further adventures of Scott Lang, also known as Ant-Man, and his partner Hope van Dyne as they balance heroics and family life.",
@@ -376,6 +405,7 @@
       },
       {
         "id": 31,
+        "img": "./img/Guardians3.jpeg",
         "original_language": "en",
         "backdrop_path": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
         "overview": "The Guardians of the Galaxy embark on another cosmic adventure.",
@@ -388,6 +418,7 @@
       },
       {
         "id": 32,
+        "img": "./img/marvels.jpeg",
         "original_language": "en",
         "backdrop_path": "/feSiISwgEpVzR1v3zv2n2AU4ANJ.jpg",
         "overview": "Details about 'The Marvels' are currently unknown.",
