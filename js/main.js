@@ -1,11 +1,7 @@
-import {grabMovies, grabMovie, deleteMovie, postMovie, patchMovie} from "./api/movies-api.js";
+import {updateMovies, deleteMovie, grabMovie, postMovie} from "./api/movies-api.js";
 
 const draggablecontainer = document.querySelector(".dragglecontainer")
 const search = document.querySelector("#search")
-
-
-
-
     let isDragging = false;
     let offsetX, offsetY;
 draggablecontainer.addEventListener('mousedown', (e) => {
@@ -30,10 +26,22 @@ document.addEventListener('mouseup', () => {
 
 
 (async ()=>{
-    const getMovies = await grabMovies()
-    console.log(getMovies)
-    const getMovie = await grabMovie(2)
-    console.log(getMovie)
+
+    await updateMovies();
+    const searchInput = document.querySelector("#draggleinput");
+    searchInput.addEventListener("input", (e)=>{
+    updateMovies();
+    });
+    const addBtn = document.querySelector("#add-btn2");
+    const addInput = document.querySelector("#add-movie");
+    addBtn.addEventListener("click", async (e)=>{
+        // console.log(addInput.value)
+        await postMovie({title: addInput.value});
+        alert("Movie Added")
+        await updateMovies()
+    })
+
+
 
     search.addEventListener("mousedown", ()=>{
         draggablecontainer.classList.toggle("display")
