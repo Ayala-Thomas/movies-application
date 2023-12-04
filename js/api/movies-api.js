@@ -35,20 +35,23 @@ export const deleteMovie = async (id) => {
     const data = await response.json()
     return data
 }
-export const postMovie = async ({title, rating}) => {
+export const postMovie = async (movie) => {
     const newMovie = {
-        title,
-        rating
+        ...movie,
     }
+    // console.log(newMovie.title)
     const body = JSON.stringify(newMovie)
     const url = 'http://localhost:3000/movies'
     const options = {
         method: "POST",
-        "Content-Type": 'application.json',
+        headers: {
+            "Content-Type": 'application/json',
+        },
         body: body,
     }
     const response = await fetch(url, options)
-    const data = await response.json()
+    const data = await response.json();
+    console.log("Data after post => ", data);
     return data
 }
 export const patchMovie = async (movie) => {
@@ -102,6 +105,7 @@ export const patchMovie = async (movie) => {
          await updateMovies();
         //  hideLoading();
      });
+
 
      const appendElement = document.querySelector("#marvel")
      appendElement.appendChild(movieElement)
