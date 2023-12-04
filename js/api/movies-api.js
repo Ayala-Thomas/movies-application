@@ -67,7 +67,7 @@ export const patchMovie = async (movie) => {
     return data
 }
  export const getAvengersMovies = async () => {
-     const url = `https://api.themoviedb.org/3/movie/299534/videos?language=en-US&api_key=3766a3326b6bf94cf2944786431d0e25`
+     const url = `https://api.themoviedb.org/3/movie/299534/quary=spiderman&language=en-US&api_key=3766a3326b6bf94cf2944786431d0e25`
      const options = {
          method: "GET",
          headers: {
@@ -84,23 +84,27 @@ export const patchMovie = async (movie) => {
      const movieElement = document.createElement('div');
      movieElement.classList.add('col');
      movieElement.innerHTML = `
-    <div class="card" style="width: 18rem;">
-  <img src="${img}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${title}</h5>
-    <p class="card-text">${overview}</p>
-    <a href="${video}" class="btn btn-primary">Go somewhere</a>
-    <button class="" id="delete-btn">Delete</button>
-  </div>
-</div>
+        <div class="card" style="width: 18rem;">
+          <img src="${img}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">${title}</h5>
+            <p class="card-text">${overview}</p>
+            <a href="${video}" class="btn btn-primary">Go somewhere</a>
+            <button id="delete-btn">Delete</button>
+          </div>
+        </div>
      `;
-     // const deleteButton = document.querySelector("#delete-btn");
-     // deleteButton.addEventListener("click", async (e)=>{
-     //     await deleteMovie()
-     // });
+
+     const deleteButton = movieElement.querySelector("#delete-btn");
+     deleteButton.addEventListener("click", async (e) => {
+         // showLoading();
+         await deleteMovie(id);
+         await updateMovies();
+        //  hideLoading();
+     });
+
      const appendElement = document.querySelector("#marvel")
      appendElement.appendChild(movieElement)
-     return appendElement
  };
 
  export const updateMovies = async () => {
