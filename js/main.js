@@ -1,4 +1,4 @@
-import { updateMovies } from "./api/movies-api.js";
+import {updateMovies, deleteMovie, grabMovie} from "./api/movies-api.js";
 
 const draggablecontainer = document.querySelector(".dragglecontainer")
 const search = document.querySelector("#search")
@@ -30,11 +30,16 @@ document.addEventListener('mouseup', () => {
 (async ()=>{
 
     await updateMovies();
-    const searchInput = document.querySelector("#search");
+    const searchInput = document.querySelector("#draggleinput");
     searchInput.addEventListener("input", (e)=>{
-        console.log(e.target)
-updateMovies();
+    updateMovies();
     });
+
+    const deleteButton = document.querySelector("#delete-btn");
+    deleteButton.addEventListener("click", async (e)=>{
+        await deleteMovie()
+    });
+
 
 
 

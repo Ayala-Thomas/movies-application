@@ -80,9 +80,9 @@ export const patchMovie = async (movie) => {
      const data = await response.json()
      return data
  }
- export const createMovieElement = ({title, overview, video, img}) => {
+ export const createMovieElement = ({title, overview, video, img, id}) => {
      const movieElement = document.createElement('div');
-     movieElement.classList.add('column');
+     movieElement.classList.add('col');
      movieElement.innerHTML = `
     <div class="card" style="width: 18rem;">
   <img src="${img}" class="card-img-top" alt="...">
@@ -90,10 +90,14 @@ export const patchMovie = async (movie) => {
     <h5 class="card-title">${title}</h5>
     <p class="card-text">${overview}</p>
     <a href="${video}" class="btn btn-primary">Go somewhere</a>
+    <button class="" id="delete-btn">Delete</button>
   </div>
 </div>
      `;
-
+     // const deleteButton = document.querySelector("#delete-btn");
+     // deleteButton.addEventListener("click", async (e)=>{
+     //     await deleteMovie()
+     // });
      const appendElement = document.querySelector("#marvel")
      appendElement.appendChild(movieElement)
      return appendElement
@@ -106,8 +110,8 @@ export const patchMovie = async (movie) => {
 
      const searchInput = document.querySelector("#draggleinput");
      const searchValue = searchInput.value;
-     const categoryInput = document.querySelector("#category");
-     const categoryValue = categoryInput.value;
+     // const categoryInput = document.querySelector("#category");
+     // const categoryValue = categoryInput.value;
 
      let filterMovies = movies;
      // filterMovies = filterMovies.filter((movies)=>{

@@ -139,7 +139,7 @@
     },
     {
       "id": 11,
-      "img": "./img/Guardians1.jpeg",
+      "img": "./img/Guradians1.jpeg",
       "original_language": "en",
       "video": "https://www.youtube.com/watch?v=d96cjJhvlMA",
       "backdrop_path": "/uLtVbjvS1O7gXL8lUOwsFOH4man.jpg",
@@ -298,7 +298,6 @@
       "vote_count": 28037,
       "poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
     },
-    [
       {
         "id": 23,
         "img": "./img/Endgame.jpeg",
@@ -405,7 +404,7 @@
       },
       {
         "id": 31,
-        "img": "./img/Guardians3.jpeg",
+        "img": "./img/gog3.jpeg",
         "original_language": "en",
         "backdrop_path": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
         "overview": "The Guardians of the Galaxy embark on another cosmic adventure.",
@@ -430,5 +429,4 @@
         "poster_path": "/y4YMYsGSMwu8e985g0Zbumvqxld.jpg"
       }
     ]
-  ]
 }
