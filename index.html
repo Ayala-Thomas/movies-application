@@ -6,9 +6,62 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MarvelCineVerse</title>
+    <link rel="stylesheet" href="attachments/layout.css">
+    <link rel="stylesheet" href="attachments/reset.css">
+    <link rel="stylesheet" href="css/marvelwebsite.css">
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script type="module" src="./js/main.js"></script>2
+<div>
+    <video autoplay loop muted>
+        <source src="../movies-application/vids/Marvel%20Intro%20HD%20(1080p)-SD.mp4" type="video/mp4">
+    </video>
+</div>
+<div class="page-wrapper">
+
+    <!--    overlay effect-->
+    <div class="overlay"></div>
+    <!--    header-->
+    <div class="container headercontainer">
+        <div class="row rowforheader">
+            <!--            movie title-->
+            <div class="column movietagcol1">
+                <p class="movietag">Movies</p>
+            </div>
+            <div class="column movietagcol">
+                <p class="movietag">Tv Shows</p>
+            </div>
+            <!--            center marvel title-->
+            <div class="column hero">
+                <h1 class="marveltag">MARVEL</h1>
+                <p class="cinematicUniverseltag">Cinematic Universel</p>
+            </div>
+            <!--            search and signup function-->
+            <div class="column searchiconcon " id="search">
+                <img src="../movies-application/img/search-icon-2044x2048-psdrpqwp.png" alt="searchicon" class="searchicon">
+            </div>
+            <div class="column searchiconcon">
+                <img src="../movies-application/img/notifications-icon-448x512-sms1ml1l.png" alt="notificationpng" class="searchicon notifcationicon">
+                <div class="notifybox"><p>Be Notified for new upcoming movies!</p></div>
+            </div>
+            <div class="column searchiconcon">
+                <p style="color: white">Sign up</p>
+            </div>
+        </div>
+    </div>
+<div class="zindex2 thorshammer">
+    <img src="../movies-application/img/5a0590e59cf05203c4b60412.png">
+</div>
+<div class="dragglecontainer zindex2 display">
+    <div class="pluscontainer">
+    <button class="" id="add-btn"><img src="../movies-application/img/kisspng-computer-icons-plus-sign-clip-art-plus-sign-5aaad89954cb75.3540222215211460093473.png" class="plussign"></button>
+    </div>
+        <video autoplay loop muted class="zindex2 drstrangeportal">
+        <source src="../movies-application/vids/doctor_strange_-_40220%20(360p).mp4" type="video/mp4">
+        </video>
+    <input type="text" id="draggleinput" placeholder="Chose Your Journey">
+</div>
+
+</div>
+<script type="module" src="./js/main.js"></script>
 </body>
 </html>
