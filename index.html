@@ -8,6 +8,7 @@
     <title>MarvelCineVerse</title>
     <link rel="stylesheet" href="attachments/layout.css">
     <link rel="stylesheet" href="attachments/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="css/marvelwebsite.css">
 </head>
 <body>
@@ -17,37 +18,28 @@
     </video>
 </div>
 <div class="page-wrapper">
-
-    <!--    overlay effect-->
     <div class="overlay"></div>
-    <!--    header-->
     <div class="container headercontainer">
         <div class="row rowforheader">
-            <!--            movie title-->
-            <div class="column movietagcol1">
-                <p class="movietag">Movies</p>
-            </div>
-            <div class="column movietagcol">
-                <p class="movietag">Tv Shows</p>
-            </div>
-            <!--            center marvel title-->
-            <div class="column hero">
-                <h1 class="marveltag">MARVEL</h1>
-                <p class="cinematicUniverseltag">Cinematic Universel</p>
-            </div>
-            <!--            search and signup function-->
-            <div class="column searchiconcon " id="search">
-                <img src="../movies-application/img/search-icon-2044x2048-psdrpqwp.png" alt="searchicon" class="searchicon">
-            </div>
-            <div class="column searchiconcon">
-                <img src="../movies-application/img/notifications-icon-448x512-sms1ml1l.png" alt="notificationpng" class="searchicon notifcationicon">
-                <div class="notifybox"><p>Be Notified for new upcoming movies!</p></div>
-            </div>
-            <div class="column searchiconcon">
-                <p style="color: white">Sign up</p>
+            <div class="col d-flex movietagcol1 gap-5">
+                <ul class="d-flex gap-5">
+                    <li class="movietag">Movies</li>
+                    <li class="movietag">Tv Shows</li>
+                </ul>
+                <div class="d-flex flex-column flex-grow-1">
+                <h1 class="marveltag text-center">MARVEL</h1>
+                <h2 class="cinematicUniverseltag">Cinematic Universe</h2>
+                </div>
             </div>
         </div>
-    </div>
+  </div>
+  <div class="container">
+      <div class="row" id="marvel">
+
+      </div>
+  </div>
+
+
 <div class="zindex2 thorshammer">
     <img src="../movies-application/img/5a0590e59cf05203c4b60412.png">
 </div>
@@ -57,6 +49,7 @@
     </video>
     <input type="text" id="draggleinput" placeholder="Chose Your Journey">
 </div>
+
 
 </div>
 <script type="module" src="./js/main.js"></script>
