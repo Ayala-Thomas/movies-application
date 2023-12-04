@@ -2,8 +2,6 @@
     movieKey: "3766a3326b6bf94cf2944786431d0e25"
 }
 
-
-
  export const grabMovies = async () => {
      const url = ` http://localhost:3000/movies`;
      const options = {
@@ -105,29 +103,14 @@ export const patchMovie = async (movie) => {
      appendElement.appendChild(movieElement)
      return appendElement
  }
-
-export const displayMovies = async () => {
-     try {
-         // Fetch the list of movies
-         const movies = await grabMovies();
-
-         // Get the container where you want to append movie elements
-         const container = document.querySelector("#marvel");
-
-         // Loop through each movie and create HTML elements
-         for (const movie of movies) {
-             const movieDetails = await grabMovie(movie.id); // Fetch additional details if needed
-
-             // Create the movie element
-             const movieElement = createMovieElement(movieDetails);
-
-             // Append the movie element to the container
-             container.appendChild(movieElement);
-         }
-     } catch (error) {
-         console.error("Error fetching and displaying movies:", error);
+ export const renderMovie = async (movie) => {
+     const movies = await grabMovies()
+     for (let movie of movies) {
+         const movieID = movie.id
+         await createMovieElement(movieID)
      }
- };
+ }
+
 
 
 
