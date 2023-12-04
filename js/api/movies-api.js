@@ -129,7 +129,7 @@ export const displayMovies = async () => {
      }
  };
 
- // Call the displayMovies function to fetch and display movies
+
 
 
 
