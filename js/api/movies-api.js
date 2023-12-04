@@ -91,20 +91,49 @@ export const patchMovie = async (movie) => {
      movieElement.classList.add('col');
      movieElement.classList.add('col-md-4');
      movieElement.innerHTML = `
-     <div class="card">
-     <div class="card-body">
-       <h5 class="card-title">${movies.title}</h5>
-       <p class="card-text">${movies.video}</p>
-     </div>
-     <ul class="list-group list-group-flush">
-       <li class="list-group-item margin-bottom"></li>
-     </ul>
-     </div>
+    <div class="card" style="width: 18rem;">
+  <img src="${movies.img}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${movies.title}</h5>
+    <p class="card-text">${movies.overview}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
      `;
-     const movieContainer = document.querySelector("#marvel");
-        movieContainer.appendChild(movieElement);
-        return movieContainer
+
+      const appendElement = document.querySelector("#marvel")
+     appendElement.appendChild(movieElement)
+     return appendElement
  }
+
+export const displayMovies = async () => {
+     try {
+         // Fetch the list of movies
+         const movies = await grabMovies();
+
+         // Get the container where you want to append movie elements
+         const container = document.querySelector("#marvel");
+
+         // Loop through each movie and create HTML elements
+         for (const movie of movies) {
+             const movieDetails = await grabMovie(movie.id); // Fetch additional details if needed
+
+             // Create the movie element
+             const movieElement = createMovieElement(movieDetails);
+
+             // Append the movie element to the container
+             container.appendChild(movieElement);
+         }
+     } catch (error) {
+         console.error("Error fetching and displaying movies:", error);
+     }
+ };
+
+ // Call the displayMovies function to fetch and display movies
+
+
+
+
 
 
 

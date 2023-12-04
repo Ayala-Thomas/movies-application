@@ -2,7 +2,7 @@
   "movies": [
     {
       "id": 1,
-      "img": "./img/Captain-America-The-First-avenger.jpg",
+      "img": "./img/First.jpeg",
       "original_language": "en",
       "overview": "Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a 'Super-Soldier serum.' But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.",
       "popularity": 41.735,
