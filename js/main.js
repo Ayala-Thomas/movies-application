@@ -1,4 +1,4 @@
-import {grabMovies, grabMovie, deleteMovie, postMovie, patchMovie, getAvengersMovies,createMovieElement,renderMovie } from "./api/movies-api.js";
+import { updateMovies } from "./api/movies-api.js";
 
 const draggablecontainer = document.querySelector(".dragglecontainer")
 const search = document.querySelector("#search")
@@ -29,14 +29,12 @@ document.addEventListener('mouseup', () => {
 
 (async ()=>{
 
-    const getMovies = await grabMovies()
-    console.log(getMovies)
-  // const firstAvenger = await createMovieElement(grabMovie(1))
-    const display = await renderMovie()
-
-
-
-
+    await updateMovies();
+    const searchInput = document.querySelector("#search");
+    searchInput.addEventListener("input", (e)=>{
+        console.log(e.target)
+updateMovies();
+    });
 
 
 

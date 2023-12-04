@@ -1,6 +1,3 @@
- export const keys = {
-    movieKey: "3766a3326b6bf94cf2944786431d0e25"
-}
 
  export const grabMovies = async () => {
      const url = ` http://localhost:3000/movies`;
@@ -83,33 +80,62 @@ export const patchMovie = async (movie) => {
      const data = await response.json()
      return data
  }
- export const createMovieElement = async (movie) => {
-     const movies = await movie
+ export const createMovieElement = ({title, overview, video, img}) => {
      const movieElement = document.createElement('div');
-     movieElement.classList.add('col');
-     movieElement.classList.add('col-md-4');
+     movieElement.classList.add('column');
      movieElement.innerHTML = `
     <div class="card" style="width: 18rem;">
-  <img src="${movies.img}" class="card-img-top" alt="...">
+  <img src="${img}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${movies.title}</h5>
-    <p class="card-text">${movies.overview}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">${title}</h5>
+    <p class="card-text">${overview}</p>
+    <a href="${video}" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
      `;
 
-      const appendElement = document.querySelector("#marvel")
+     const appendElement = document.querySelector("#marvel")
      appendElement.appendChild(movieElement)
      return appendElement
- }
- export const renderMovie = async (movie) => {
-     const movies = await grabMovies()
-     for (let movie of movies) {
-         const movieID = movie.id
-         await createMovieElement(movieID)
+ };
+
+ export const updateMovies = async () => {
+     const movies = await grabMovies();
+     const coffeesContainer = document.querySelector("#marvel")
+     coffeesContainer.innerHTML = "";
+
+     const searchInput = document.querySelector("#draggleinput");
+     const searchValue = searchInput.value;
+     const categoryInput = document.querySelector("#category");
+     const categoryValue = categoryInput.value;
+
+     let filterMovies = movies;
+     // filterMovies = filterMovies.filter((movies)=>{
+     //     if (!categoryValue) {
+     //         return true;
+     //     }
+     //     if (!movies.vote_count) {
+     //         return false;
+     //     }
+     //     return movies.vote_count.includes(categoryValue.toLowerCase());
+     // })
+     filterMovies = filterMovies.filter((movies)=>{
+         if (!searchValue) {
+             return true;
+         }
+         if (typeof movies.title!== "string") {
+             return false;
+         }
+         return movies.title.toLowerCase().includes(searchValue.toLowerCase());
+     });
+     for (let movie of filterMovies) {
+         createMovieElement(movie);
      }
+
+
+
  }
+
 
 
 
