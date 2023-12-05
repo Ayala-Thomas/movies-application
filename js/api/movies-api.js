@@ -39,9 +39,8 @@ export const postMovie = async (movie) => {
     const newMovie = {
         ...movie,
     }
-    // console.log(newMovie.title)
     const body = JSON.stringify(newMovie)
-    const url = 'http://localhost:3000/movies'
+    const url = `http://localhost:3000/movies`
     const options = {
         method: "POST",
         headers: {
@@ -54,16 +53,17 @@ export const postMovie = async (movie) => {
     console.log("Data after post => ", data);
     return data
 }
+
+
 export const patchMovie = async (movie) => {
-    const newMovie = {
-        ...movie
-    }
-    const body = JSON.stringify(newMovie)
-    const url = `http://localhost:3000/movies/${movie.id}`
+    console.log(`patchMovie() called with => `, movie);
+    const url = `http://localhost:3000/movies/${movie.id}/`
     const options = {
         method: "PATCH",
-        "Content-Type": 'application.json',
-        body: body,
+        headers: {
+            "Content-Type": 'application/json',
+        },
+        body: JSON.stringify(movie),
     }
     const response = await fetch(url, options)
     const data = await response.json()
@@ -83,7 +83,7 @@ export const patchMovie = async (movie) => {
      const data = await response.json()
      return data
  }
- export const createMovieElement = ({title, overview, video, img, id}) => {
+ export const createMovieElement = ({title, overview, video, img, id, vote_average}) => {
      const movieElement = document.createElement('div');
      movieElement.classList.add('col');
      movieElement.innerHTML = `
@@ -96,16 +96,40 @@ export const patchMovie = async (movie) => {
             <hr>
             <div class="scrollme">
             <p class="card-text">${overview}</p>
+            <meter value="${vote_average}" min="0" max="10" class="w-100"></meter>
+            <p>
+    <a class="btn edit-btn" data-bs-toggle="collapse" href="#collapseMovie${id}" role="button" aria-expanded="false" aria-controls="collapseExample">
+       Edit Movie
+    </a>
+
+</p>
+<div class="collapse" id="collapseMovie${id}">
+    <form class="card card-body" data-form>
+       
+            <label for="movie">
+            <input name="title" type="text" class="edit-title" placeholder="Edit Title" value="${title}">
+            <input name="vote_average" type="text" class="edit-rating" placeholder="Edit Rating" value="${vote_average}">
+            <input name="overview" type="text" class="edit-overview" placeholder="Edit Overview" value="${overview}">
+            <input type="submit" class="submit-btn">
+            </label>
+    
+    </form>
+</div>
+
+            <a href="${video}" class="btn btn-primary">Go somewhere</a>
+            <button class="delete-btn">Delete</button>
+
             </div>
             <div class="addAndDeletebtn">
             <a href="${video}" class="btn btn-primary">Play Trailer</a>
             <button id="delete-btn">Delete</button>
             </div>
+            
           </div>
         </div>
      `;
 
-     const deleteButton = movieElement.querySelector("#delete-btn");
+     const deleteButton = movieElement.querySelector(".delete-btn");
      deleteButton.addEventListener("click", async (e) => {
          // showLoading();
          await deleteMovie(id);
@@ -114,14 +138,30 @@ export const patchMovie = async (movie) => {
      });
 
 
+        const editForm = movieElement.querySelector("form[data-form]");
+        editForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(editForm);
+
+            await patchMovie({
+                // can only update title, rating, and overview
+                id: id,
+                title: formData.get("title"),
+                overview: formData.get("overview"),
+                vote_average: parseFloat(formData.get("vote_average")),
+            });
+            await updateMovies();
+        });
+
+     // console.log(patchMovie())
      const appendElement = document.querySelector("#marvel")
      appendElement.appendChild(movieElement)
  };
 
  export const updateMovies = async () => {
      const movies = await grabMovies();
-     const coffeesContainer = document.querySelector("#marvel")
-     coffeesContainer.innerHTML = "";
+     const moviesContainer = document.querySelector("#marvel")
+     moviesContainer.innerHTML = "";
 
      const searchInput = document.querySelector("#draggleinput");
      const searchValue = searchInput.value;

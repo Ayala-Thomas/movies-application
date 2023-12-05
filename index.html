@@ -8,7 +8,7 @@
     <title>MarvelCineVerse</title>
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/marvelwebsite.css">
-    <link rel="stylesheet" href="./css/style.css.css">
+
 </head>
 <body>
 <div>
@@ -42,6 +42,18 @@
             <div class="column searchiconcon">
                 <img src="../movies-application/img/notifications-icon-448x512-sms1ml1l.png" alt="notificationpng" class="searchicon notifcationicon">
                 <div class="notifybox"><p>Be Notified for new upcoming movies!</p></div>
+
+            </div>
+            <div class="column searchiconcon">
+            <form id="add-form">
+                <label>
+                    Add Movie
+                    <input name="title" type="text" id="add-movie" placeholder="Add Movie">
+                    <input name="vote_average" type="text" id="add-rating" placeholder="Add Rating">
+                    <input name="overview" type="text" id="add-overview" placeholder="Add Description">
+                    <input type="submit" id="add-btn2">
+                </label>
+                </form>
 
             </div>
                     <div class="column addmenu">
@@ -81,7 +93,9 @@
         <video autoplay loop muted class="zindex2 drstrangeportal">
         <source src="../movies-application/vids/doctor_strange_-_40220%20(360p).mp4" type="video/mp4">
         </video>
+
     <input type="text" id="draggleinput" placeholder="Chose Your Journey">
+
 </div>
 
 </div>
