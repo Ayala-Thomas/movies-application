@@ -176,7 +176,7 @@ video {
     /*display: none;*/
 }
 .takeoff {
-    animation: slideRightandspin 1s linear infinite;
+    animation: slideRightandspin 2s linear infinite;
     width: 120px;
     height: 100px;
 }
@@ -186,7 +186,7 @@ video {
         transform: translateX(1000px);
     }
     100% {
-        transform: translateX(0) rotate(360deg);
+        transform: translateX(0) rotate(5000deg);
     }
 }
 .hammerimg{
@@ -283,4 +283,27 @@ hr{
 .card{
     border: 1px solid black;
 }
+.loki{
+    position: relative;
+    top: 102px;
+    left: 145px;
+    animation: jump 2s infinite;
+}
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Initial position and positions after each jump */
+    }
+    80% {
+        transform: translateY(-150px);
+    }
+    95%{
+        transform: translateY(-80px);
+    }
+    98%{
+        transform: translateY(-50px);
+    }
+}
 
+.jumping-image {
+    animation: jump 2s infinite; /* Adjust the duration and timing as needed */
+}
