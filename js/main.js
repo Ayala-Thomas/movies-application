@@ -24,7 +24,6 @@ document.addEventListener('mouseup', () => {
 });
 
 
-
 (async ()=>{
 
     await updateMovies();
@@ -40,6 +39,8 @@ document.addEventListener('mouseup', () => {
         alert("Movie Added")
         await updateMovies()
     })
+
+
 
 
 
