@@ -40,7 +40,7 @@ export const postMovie = async (movie) => {
         ...movie,
     }
     const body = JSON.stringify(newMovie)
-    const url = `http://localhost:3000/movies${movie.id}`
+    const url = `http://localhost:3000/movies`
     const options = {
         method: "POST",
         headers: {
@@ -53,21 +53,22 @@ export const postMovie = async (movie) => {
     console.log("Data after post => ", data);
     return data
 }
+
+
 export const patchMovie = async (movie) => {
-    const newMovie = {
-        ...movie
-    }
-    const body = JSON.stringify(newMovie)
+    console.log(`patchMovie() called with => `, movie);
     const url = `http://localhost:3000/movies/${movie.id}/`
     const options = {
         method: "PATCH",
-        body: body,
+        headers: {
+            "Content-Type": 'application/json',
+        },
+        body: JSON.stringify(movie),
     }
     const response = await fetch(url, options)
     const data = await response.json()
     return data
 }
-console.log(patchMovie())
  export const getAvengersMovies = async () => {
      const url = `https://api.themoviedb.org/3/movie/299534/quary=spiderman&language=en-US&api_key=3766a3326b6bf94cf2944786431d0e25`
      const options = {
@@ -93,31 +94,31 @@ console.log(patchMovie())
             <p class="card-text">${overview}</p>
             <meter value="${vote_average}" min="0" max="10" class="w-100"></meter>
             <p>
-    <a class="btn" data-bs-toggle="collapse" href="#collapseMovie${id}" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <a class="btn edit-btn" data-bs-toggle="collapse" href="#collapseMovie${id}" role="button" aria-expanded="false" aria-controls="collapseExample">
        Edit Movie
     </a>
 
 </p>
 <div class="collapse" id="collapseMovie${id}">
-    <div class="card card-body">
+    <form class="card card-body" data-form>
        
             <label for="movie">
-            <input type="text" id="edit-title" placeholder="Edit Title">
-            <input type="text" id="edit-rating" placeholder="Edit Rating">
-            <input type="text" id="edit-overview" placeholder="Edit Overview">
-            <input type="submit" id="edit-btn">
+            <input name="title" type="text" class="edit-title" placeholder="Edit Title" value="${title}">
+            <input name="vote_average" type="text" class="edit-rating" placeholder="Edit Rating" value="${vote_average}">
+            <input name="overview" type="text" class="edit-overview" placeholder="Edit Overview" value="${overview}">
+            <input type="submit" class="submit-btn">
             </label>
     
-    </div>
+    </form>
 </div>
 
             <a href="${video}" class="btn btn-primary">Go somewhere</a>
-            <button id="delete-btn">Delete</button>
+            <button class="delete-btn">Delete</button>
           </div>
         </div>
      `;
 
-     const deleteButton = movieElement.querySelector("#delete-btn");
+     const deleteButton = movieElement.querySelector(".delete-btn");
      deleteButton.addEventListener("click", async (e) => {
          // showLoading();
          await deleteMovie(id);
@@ -125,28 +126,23 @@ console.log(patchMovie())
         //  hideLoading();
      });
 
-     const editTitle = movieElement.querySelector("#edit-title");
-     const editRating = movieElement.querySelector("#edit-rating");
-     const editOverview = movieElement.querySelector("#edit-overview");
-     const editBtn = movieElement.querySelector("#edit-btn");
 
-     editBtn.addEventListener("click", async (e) => {
-         console.log(editTitle.value);
-         await patchMovie({
-             // can only update title, rating, and overview
+        const editForm = movieElement.querySelector("form[data-form]");
+        editForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(editForm);
+
+            await patchMovie({
+                // can only update title, rating, and overview
                 id: id,
-                title: editTitle.value,
-                overview: editOverview.value,
-                vote_average: parseFloat(editRating.value),
+                title: formData.get("title"),
+                overview: formData.get("overview"),
+                vote_average: parseFloat(formData.get("vote_average")),
+            });
+            await updateMovies();
+        });
 
-
-
-
-
-         });
-         await updateMovies();
-     });
-     console.log(patchMovie())
+     // console.log(patchMovie())
      const appendElement = document.querySelector("#marvel")
      appendElement.appendChild(movieElement)
  };

@@ -1,4 +1,4 @@
-import {updateMovies, deleteMovie, grabMovie, postMovie} from "./api/movies-api.js";
+import {updateMovies, deleteMovie, grabMovie, postMovie, patchMovie} from "./api/movies-api.js";
 
 const draggablecontainer = document.querySelector(".dragglecontainer")
 const search = document.querySelector("#search")
@@ -32,19 +32,16 @@ document.addEventListener('mouseup', () => {
     searchInput.addEventListener("input", (e)=>{
     updateMovies();
     });
-    const addBtn = document.querySelector("#add-btn2");
-    const rateInput = document.querySelector("#add-rating");
-    const overviewInput = document.querySelector("#add-overview");
-    const titleInput = document.querySelector("#add-movie");
-    addBtn.addEventListener("click", async (e)=>{
-        // console.log(addInput.value)
+
+    const addForm = document.querySelector("#add-form");
+    addForm.addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const formData = new FormData(addForm);
         await postMovie({
-            title: titleInput.value,
-            overview: overviewInput.value,
-            vote_average: parseFloat(rateInput.value),
+            title: formData.get("title"),
+            overview: formData.get("overview"),
+            vote_average: parseFloat(formData.get("vote_average")),
             img: "./img/default.webp"
-
-
         });
         alert("Movie Added")
         await updateMovies()
