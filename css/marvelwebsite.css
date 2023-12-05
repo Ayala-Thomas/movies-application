@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 body {
+    font-family: 'Anton', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -22,7 +26,7 @@ body {
 .headercontainer{
     padding: 10px;
     z-index: 2;
-    min-width: 100px;
+    min-width: 100%;
 }
 .zindex2{
     z-index: 2;
@@ -49,7 +53,7 @@ body {
     font-size: 60px;
     color: #f90100;
     position: relative;
-    top: -31px
+    top: -14px
 }
 .cinematicUniverseltag{
     text-align: center;
@@ -57,7 +61,7 @@ body {
     font-weight: 400;
     font-size: 30px;
     position: relative;
-    top: -48px;
+    top: -28px;
 }
 .searchicon{
     height: 20px;
@@ -86,8 +90,8 @@ body {
 .dragglecontainer{
     background-color: black;
     position: absolute;
-    top: 15%;
-    left: 90%;
+    top: 4%;
+    left: 78%;
     transform: translate(-50%, -50%);
     border: 2px solid black;
     border-radius: 5px;
@@ -133,13 +137,17 @@ body {
     display: block;
 }
 .notifybox{
+    text-align: center;
+    width: 100px;
     display: none;
     font-size: 10px;
     position: absolute;
     right: 50px;
     top: 5px;
-    background-color: white;
+    background-color: black;
     border-radius: 10px;
+    color: #f90100;
+
 }
 .notifcationicon:active{
     background-color: blue;
@@ -192,5 +200,87 @@ video {
     left: 100px;
     max-height: 40px;
     max-width: 40px;
+}
+#add-movie{
+    margin-top: 5px;
+    width: 80px;
+    background-color: black;
+    color: #f90100;
+    border: 1px solid black;
+}
+#add-btn2{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    color: #f90100;
+    background-position: center;
+    background-size: cover;
+    border: none;
+}
+.addmenu{
+    padding-top: 7px;
+    height: 100px;
+    max-width: 100px;
+}
+.plussigninheader{
+    height: 30px;
+    width: 30px;
+}
+#collapsePizza{
+    background-color: black;
+}
+.card-body1{
+    background-color: black;
+}
+.card-title{
+    background-color: #fdfef5;
+    text-align: center;
+    overflow: auto;
+}
+.titleimg{
+    border-bottom: 2px solid black;
+}
+.addAndDeletebtn{
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+.scrollme{
+    background-color: #fdfef5;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    height: 100px;
+    max-width: 240px;
+    overflow: auto; /* Use 'auto' to add scrollbars when needed */
+    padding: 10px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    }
+hr{
+    width: 80%;
+    margin-left: 26px;
+    border: 1px solid #64b358;
+}
+.btn-primary{
+    padding: 5px;
+    font-size: 15px;
+}
+#delete-btn{
+    border: none;
+    background-color: black;
+    color: #f90100;
+}
+.cards{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#marvel{
+    gap: 10px;
+}
+.card{
+    border: 1px solid black;
 }
 
