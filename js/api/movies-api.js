@@ -39,9 +39,8 @@ export const postMovie = async (movie) => {
     const newMovie = {
         ...movie,
     }
-    // console.log(newMovie.title)
     const body = JSON.stringify(newMovie)
-    const url = 'http://localhost:3000/movies'
+    const url = `http://localhost:3000/movies${movie.id}`
     const options = {
         method: "POST",
         headers: {
@@ -59,16 +58,16 @@ export const patchMovie = async (movie) => {
         ...movie
     }
     const body = JSON.stringify(newMovie)
-    const url = `http://localhost:3000/movies/${movie.id}`
+    const url = `http://localhost:3000/movies/${movie.id}/`
     const options = {
         method: "PATCH",
-        "Content-Type": 'application.json',
         body: body,
     }
     const response = await fetch(url, options)
     const data = await response.json()
     return data
 }
+console.log(patchMovie())
  export const getAvengersMovies = async () => {
      const url = `https://api.themoviedb.org/3/movie/299534/quary=spiderman&language=en-US&api_key=3766a3326b6bf94cf2944786431d0e25`
      const options = {
@@ -83,7 +82,7 @@ export const patchMovie = async (movie) => {
      const data = await response.json()
      return data
  }
- export const createMovieElement = ({title, overview, video, img, id}) => {
+ export const createMovieElement = ({title, overview, video, img, id, vote_average}) => {
      const movieElement = document.createElement('div');
      movieElement.classList.add('col');
      movieElement.innerHTML = `
@@ -92,6 +91,26 @@ export const patchMovie = async (movie) => {
           <div class="card-body">
             <h5 class="card-title">${title}</h5>
             <p class="card-text">${overview}</p>
+            <meter value="${vote_average}" min="0" max="10" class="w-100"></meter>
+            <p>
+    <a class="btn" data-bs-toggle="collapse" href="#collapseMovie${id}" role="button" aria-expanded="false" aria-controls="collapseExample">
+       Edit Movie
+    </a>
+
+</p>
+<div class="collapse" id="collapseMovie${id}">
+    <div class="card card-body">
+       
+            <label for="movie">
+            <input type="text" id="edit-title" placeholder="Edit Title">
+            <input type="text" id="edit-rating" placeholder="Edit Rating">
+            <input type="text" id="edit-overview" placeholder="Edit Overview">
+            <input type="submit" id="edit-btn">
+            </label>
+    
+    </div>
+</div>
+
             <a href="${video}" class="btn btn-primary">Go somewhere</a>
             <button id="delete-btn">Delete</button>
           </div>
@@ -106,15 +125,36 @@ export const patchMovie = async (movie) => {
         //  hideLoading();
      });
 
+     const editTitle = movieElement.querySelector("#edit-title");
+     const editRating = movieElement.querySelector("#edit-rating");
+     const editOverview = movieElement.querySelector("#edit-overview");
+     const editBtn = movieElement.querySelector("#edit-btn");
 
+     editBtn.addEventListener("click", async (e) => {
+         console.log(editTitle.value);
+         await patchMovie({
+             // can only update title, rating, and overview
+                id: id,
+                title: editTitle.value,
+                overview: editOverview.value,
+                vote_average: parseFloat(editRating.value),
+
+
+
+
+
+         });
+         await updateMovies();
+     });
+     console.log(patchMovie())
      const appendElement = document.querySelector("#marvel")
      appendElement.appendChild(movieElement)
  };
 
  export const updateMovies = async () => {
      const movies = await grabMovies();
-     const coffeesContainer = document.querySelector("#marvel")
-     coffeesContainer.innerHTML = "";
+     const moviesContainer = document.querySelector("#marvel")
+     moviesContainer.innerHTML = "";
 
      const searchInput = document.querySelector("#draggleinput");
      const searchValue = searchInput.value;

@@ -33,13 +33,24 @@ document.addEventListener('mouseup', () => {
     updateMovies();
     });
     const addBtn = document.querySelector("#add-btn2");
-    const addInput = document.querySelector("#add-movie");
+    const rateInput = document.querySelector("#add-rating");
+    const overviewInput = document.querySelector("#add-overview");
+    const titleInput = document.querySelector("#add-movie");
     addBtn.addEventListener("click", async (e)=>{
         // console.log(addInput.value)
-        await postMovie({title: addInput.value});
+        await postMovie({
+            title: titleInput.value,
+            overview: overviewInput.value,
+            vote_average: parseFloat(rateInput.value),
+            img: "./img/default.webp"
+
+
+        });
         alert("Movie Added")
         await updateMovies()
     })
+
+
 
 
 
