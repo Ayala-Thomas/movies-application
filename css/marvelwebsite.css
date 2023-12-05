@@ -207,7 +207,6 @@ video {
 #add-movie{
     margin-top: 5px;
     width: 80px;
-    background-color: black;
     color: #f90100;
     border: 1px solid black;
 }
@@ -315,4 +314,10 @@ hr{
 }
 .add-hammer {
     display: block;
+}
+#add-rating{
+    max-width: 90px;
+}
+#add-overview{
+    aspect-ratio:1/1;
 }
