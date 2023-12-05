@@ -91,11 +91,13 @@ export const patchMovie = async (movie) => {
             <div class="titleimg">
                 <img src="${img}" class="card-img-top" alt="...">
             </div>
+            <div>
           <div class="card-body">
             <h5 class="card-title">${title}</h5>
             <hr>
             <div class="scrollme">
-            <p class="card-text">${overview}</p>
+            <p class="card-text text-center">${overview}</p>
+            </div>
             <meter value="${vote_average}" min="0" max="10" class="w-100"></meter>
             <p>
     <a class="btn edit-btn" data-bs-toggle="collapse" href="#collapseMovie${id}" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -116,13 +118,12 @@ export const patchMovie = async (movie) => {
     </form>
 </div>
 
-            <a href="${video}" class="btn btn-primary">Go somewhere</a>
-            <button class="delete-btn">Delete</button>
+           
 
             </div>
             <div class="addAndDeletebtn">
             <a href="${video}" class="btn btn-primary">Play Trailer</a>
-            <button id="delete-btn">Delete</button>
+            <button class="delete-btn" id="delete-btn">Delete</button>
             </div>
             
           </div>
@@ -155,7 +156,7 @@ export const patchMovie = async (movie) => {
 
      // console.log(patchMovie())
      const appendElement = document.querySelector("#marvel")
-     appendElement.appendChild(movieElement)
+     appendElement.prepend(movieElement)
  };
 
  export const updateMovies = async () => {

@@ -267,7 +267,7 @@ hr{
     padding: 5px;
     font-size: 15px;
 }
-#delete-btn{
+.delete-btn{
     border: none;
     background-color: black;
     color: #f90100;
