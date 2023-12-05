@@ -30,6 +30,7 @@ document.addEventListener('mouseup', () => {
     const searchInput = document.querySelector("#draggleinput");
     searchInput.addEventListener("input", (e)=>{
     updateMovies();
+
     });
 
     const addForm = document.querySelector("#add-form");
@@ -45,6 +46,7 @@ document.addEventListener('mouseup', () => {
         alert("Movie Added")
         await updateMovies()
     })
+const removeHammer = document.querySelector("#remove-hammer")
 
 
 

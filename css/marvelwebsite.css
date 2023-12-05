@@ -3,6 +3,7 @@
 
 
 body {
+    position: relative;
     font-family: 'Anton', sans-serif;
     margin: 0;
     padding: 0;
@@ -173,20 +174,22 @@ video {
 }
 
 .thorshammer {
-    /*display: none;*/
+    top: 300px;
+    left: 650PX;
+    position: absolute;
 }
 .takeoff {
-    animation: slideRightandspin 2s linear infinite;
+    animation: spin 2s linear infinite;
     width: 120px;
     height: 100px;
 }
 
-@keyframes slideRightandspin {
-    0% {
-        transform: translateX(1000px);
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
     }
     100% {
-        transform: translateX(0) rotate(5000deg);
+        transform: rotate(5000deg);
     }
 }
 .hammerimg{
@@ -306,4 +309,7 @@ hr{
 
 .jumping-image {
     animation: jump 2s infinite; /* Adjust the duration and timing as needed */
+}
+.remove-hammer{
+    display: none;
 }
