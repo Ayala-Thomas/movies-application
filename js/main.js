@@ -52,8 +52,7 @@ document.addEventListener('mouseup', () => {
     document.addEventListener("loadstart", () => {
         hammer.classList.add("add-hammer");
 
-        // Set a timeout to remove the class after a short delay
-         // Adjust the delay as needed
+
     });
 
     setTimeout(() => {
