@@ -56,12 +56,9 @@ document.addEventListener('mouseup', () => {
          // Adjust the delay as needed
     });
 
-
     setTimeout(() => {
         hammer.classList.add("remove-hammer");
-    }, 300);
-
-
+    }, 100);
 
     search.addEventListener("mousedown", ()=>{
         draggablecontainer.classList.toggle("display")
