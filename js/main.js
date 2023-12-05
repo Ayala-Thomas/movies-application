@@ -46,9 +46,20 @@ document.addEventListener('mouseup', () => {
         alert("Movie Added")
         await updateMovies()
     })
-const removeHammer = document.querySelector("#remove-hammer")
+
+    const hammer = document.querySelector(".takeoff");
+
+    document.addEventListener("loadstart", () => {
+        hammer.classList.add("add-hammer");
+
+        // Set a timeout to remove the class after a short delay
+         // Adjust the delay as needed
+    });
 
 
+    setTimeout(() => {
+        hammer.classList.add("remove-hammer");
+    }, 300);
 
 
 

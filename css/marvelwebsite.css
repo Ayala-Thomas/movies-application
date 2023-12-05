@@ -313,3 +313,6 @@ hr{
 .remove-hammer{
     display: none;
 }
+.add-hammer {
+    display: block;
+}
