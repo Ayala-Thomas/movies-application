@@ -24,7 +24,6 @@ document.addEventListener('mouseup', () => {
 });
 
 
-
 (async ()=>{
 
     await updateMovies();

@@ -88,9 +88,13 @@ export const patchMovie = async (movie) => {
      movieElement.classList.add('col');
      movieElement.innerHTML = `
         <div class="card" style="width: 18rem;">
-          <img src="${img}" class="card-img-top" alt="...">
+            <div class="titleimg">
+                <img src="${img}" class="card-img-top" alt="...">
+            </div>
           <div class="card-body">
             <h5 class="card-title">${title}</h5>
+            <hr>
+            <div class="scrollme">
             <p class="card-text">${overview}</p>
             <meter value="${vote_average}" min="0" max="10" class="w-100"></meter>
             <p>
@@ -114,6 +118,13 @@ export const patchMovie = async (movie) => {
 
             <a href="${video}" class="btn btn-primary">Go somewhere</a>
             <button class="delete-btn">Delete</button>
+
+            </div>
+            <div class="addAndDeletebtn">
+            <a href="${video}" class="btn btn-primary">Play Trailer</a>
+            <button id="delete-btn">Delete</button>
+            </div>
+            
           </div>
         </div>
      `;
