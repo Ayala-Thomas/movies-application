@@ -69,20 +69,7 @@ export const patchMovie = async (movie) => {
     const data = await response.json()
     return data
 }
- export const getAvengersMovies = async () => {
-     const url = `https://api.themoviedb.org/3/movie/299534/quary=spiderman&language=en-US&api_key=3766a3326b6bf94cf2944786431d0e25`
-     const options = {
-         method: "GET",
-         headers: {
-             'Content-Type': 'application/json',
 
-         }
-     }
-
-     const response = await fetch(url, options)
-     const data = await response.json()
-     return data
- }
  export const createMovieElement = ({title, overview, video, img, id, vote_average}) => {
      const movieElement = document.createElement('div');
      movieElement.classList.add('col');

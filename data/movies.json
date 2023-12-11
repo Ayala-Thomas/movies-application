@@ -406,6 +406,20 @@
       "poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg"
     },
     {
+      "id": 30,
+      "img": "./img/Ant-Man-Quanta.jpeg",
+      "video": "https://www.youtube.com/watch?v=5WfTEZJnv_8",
+      "original_language": "en",
+      "backdrop_path": "/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg",
+      "overview": "The further adventures of Scott Lang, also known as Ant-Man, and his partner Hope van Dyne as they balance heroics and family life.",
+      "popularity": 0,
+      "release_date": "2023-02-17",
+      "title": "Ant-Man and the Wasp: Quantumania",
+      "vote_average": 0,
+      "vote_count": 0,
+      "poster_path": "/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+    },
+    {
       "id": 31,
       "img": "./img/gog3.jpeg",
       "original_language": "en",
@@ -443,13 +457,6 @@
       "title": "Spider-Man: No Way Home",
       "vote_average": 10,
       "vote_count": 100000
-    },
-    {
-      "title": "hulk",
-      "overview": "fdvnvdndndfnvd",
-      "vote_average": 8,
-      "img": "./img/default.webp",
-      "id": 34
     }
   ]
 }
